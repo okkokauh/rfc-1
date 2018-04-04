@@ -154,7 +154,7 @@ transfer and a timestamp. Also has Fhir references to the requesting practitione
 
 ## Data model visualised
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?14)
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/okkokauh/rfc-1/master/ODA-PHR-Datamodel.plantuml?15)
 <!-- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?15 -->
 
 ## Data models for practitioner roles
