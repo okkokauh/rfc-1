@@ -63,7 +63,15 @@ class Care::EpisodeOfCare {
    	Reference<Practitioner> careManager
    	Reference<CareTeam> team
    	Reference<Patient> patient
+   	Reference<ReferralRequest> referral
 } 
+
+class Care::ReferralRequest {
+    Reference<Practitioner> agent
+    Reference<Practitioner> recipient
+    Reference<Patient> subject
+}
+
 
 class Care::ActivityDefinition
 
@@ -77,6 +85,7 @@ Care::CareTeam "0..*" -- "0..*" Care::EpisodeOfCare : Care team
 Care::CarePlan "0..*" -- "0..*" PHRData : supportingInfo
 Care::EpisodeOfCare "0..1" -- "1" Care::CarePlan 
 Care::EpisodeOfCare "0..*" -- "1" Patient
+Care::EpisodeOfCare "1" -- "0..*" Care::ReferralRequest
 
 Person "1" -up- "0..1" Patient
 Person "1" --" 0..1" Practitioner

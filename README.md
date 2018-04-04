@@ -115,7 +115,9 @@ Data models of the following profiles:
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-QuestionnaireResponse.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaireresponse.example.json)
   * Documentation [STU3](http://hl7.org/fhir/questionnaireresponse.html)
-
+        
+* ReferralRequest, information about a transfer of a patient between practitioners
+  * Documentation [STU3](https://www.hl7.org/fhir/referralrequest.html)
 ## Data model explained
 
 * **CarePlan** (**Hoitosuunnitelma**) is the central element in ODA data model as it gathers the care related information for the patient.
@@ -145,6 +147,8 @@ to the _MedicationStatement_ instance.
 * **Flag** (**Riskitieto**) Risk-information added by patient and authorized to care-team via careplan.
 * **Organization** (**Organisaatio**) Managing organization of the CareTeam representing the service request list.
 * **Goal** (**Tavoite**) The "master" goal of the patient.
+* **ReferralRequest** (**Lähete**) Is created when a patient is transferred between practitioners. Contains a text description of the 
+transfer and a timestamp. Also has Fhir references to the requesting practitioner and recipient practitioner. 
 
 
 
