@@ -86,6 +86,8 @@ Care::CarePlan "0..*" -- "0..*" PHRData : supportingInfo
 Care::EpisodeOfCare "0..1" -- "1" Care::CarePlan 
 Care::EpisodeOfCare "0..*" -- "1" Patient
 Care::EpisodeOfCare "1" -- "0..*" Care::ReferralRequest
+Care::ReferralRequest "0..*" -- "2" Practitioner
+Care::ReferralRequest "0..*" -- "1" Patient
 
 Person "1" -up- "0..1" Patient
 Person "1" --" 0..1" Practitioner
