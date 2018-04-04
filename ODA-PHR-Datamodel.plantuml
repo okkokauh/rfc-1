@@ -63,13 +63,13 @@ class Care::EpisodeOfCare {
    	Reference<Practitioner> careManager
    	Reference<CareTeam> team
    	Reference<Patient> patient
-   	Reference<ReferralRequest> referral
 } 
 
 class Care::ReferralRequest {
     Reference<Practitioner> agent
     Reference<Practitioner> recipient
     Reference<Patient> subject
+    Reference<EpisodeOfCare> context
 }
 
 
@@ -85,7 +85,7 @@ Care::CareTeam "0..*" -- "0..*" Care::EpisodeOfCare : Care team
 Care::CarePlan "0..*" -- "0..*" PHRData : supportingInfo
 Care::EpisodeOfCare "0..1" -- "1" Care::CarePlan 
 Care::EpisodeOfCare "0..*" -- "1" Patient
-Care::EpisodeOfCare "1" -- "0..*" Care::ReferralRequest
+Care::ReferralRequest "0..*" -- "1" Care::EpisodeOfCare
 Care::ReferralRequest "0..*" -- "2" Practitioner
 Care::ReferralRequest "0..*" -- "1" Patient
 

@@ -148,7 +148,7 @@ to the _MedicationStatement_ instance.
 * **Organization** (**Organisaatio**) Managing organization of the CareTeam representing the service request list.
 * **Goal** (**Tavoite**) The "master" goal of the patient.
 * **ReferralRequest** (**Lähete**) Is created when a patient is transferred between practitioners. Contains a text description of the 
-transfer and a timestamp. Also has Fhir references to the requesting practitioner and recipient practitioner. 
+transfer and a timestamp. Also has Fhir references to the requesting practitioner, recipient practitioner and related EpisodeOfCare. 
 
 
 
